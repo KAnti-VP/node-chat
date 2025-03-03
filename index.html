@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <style>
+    body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+    #chat { list-style-type: none; margin: 0; padding: 0; }
+    #chat li { padding: 0.5rem 1rem; }
+    #chat li:nth-child(odd) { background: #efefef; }
+  </style>
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <h1>Chat App</h1>
+  <div id="login">
+    <label for="username">Username:</label>
+    <input type="text" id="username" />
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <div id="chatContainer" style="display:none;">
+    <ul id="chat"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" /><button>Send</button>
+    </form>
+  </div>
+</body>
+</html>
